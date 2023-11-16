@@ -1,7 +1,6 @@
 <template>
   <!--Input Data For DataBase-->
   <div class="content">
-      <h3>Isi Data <br>Pengunjung</h3>
       <form @submit.prevent="addData" >
           <div class="row">
               <div class="col-sm-10">
@@ -55,6 +54,10 @@
 <script setup>
 const supabase = useSupabaseClient()
 const datas = ref([])
+const name= ref('')
+const kategori= ref('')
+const keperluan= ref('')
+
 
 async function getData(){
   const{data,error}=await supabase
@@ -69,7 +72,7 @@ async function getData(){
 // Add Data From Input To Database
 async function addData(){
     const { error } = await supabase
-    .from('anggota')
+    .from('kunjungan')
     .insert([{
         kategori: kategori.value,
         nama: name.value,
@@ -83,5 +86,18 @@ onMounted(() =>{
 })
 </script>
 <style scope>
-
+.content {
+    background-image: url("@/assets/images/bg.png");
+    width: 100%;
+    height: 700px;
+    padding-top: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.btn{
+    background: #05ff09;
+}
 </style>
