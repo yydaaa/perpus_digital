@@ -23,9 +23,9 @@
                         <div class="col mb-4">
                             <select v-model="tingkat" id="tingkat" class="form-select">
                                 <option disabled value="">Tingkat..</option>
-                                <option>V</option>
-                                <option>VI</option>
-                                <option>VII</option>
+                                <option>X</option>
+                                <option>XI</option>
+                                <option>XII</option>
                             </select>
                         </div>
                         <div class="col mb-4">
