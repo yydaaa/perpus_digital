@@ -133,7 +133,7 @@ async function addData(){
 </script>
 <style scope>
 .content {
-    background-image: url("@/assets/images/bg.png");
+    background-image: url("@/assets/bg.png");
     width: 100%;
     height: 650px;
     padding-top: 150px;
