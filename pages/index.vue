@@ -48,7 +48,6 @@
                             </select>                
                         </div>
                     </div>
-  
             <div class="row">
                 <div class="col-sm-10">
                     <input v-model="keperluan" type="text" class="form-control form-control-lg" id="keperluan" placeholder="Keperluan..." required>
@@ -57,13 +56,13 @@
             <button class="btn">Submit</button>
         </form>
     </div>
-  
-  <!--Showing Data Tables-->
-  <div class="showData">
+
+<!--Showing Data Tables-->
+<div class="showData">
         <h1>Riwayat Pengunjung</h1>
-        <div class="table-responsive">
+        <div class="table-responsive table-bordered ">
             <div class="m-2">Menampilkan {{ datas.length }} data</div>
-            <table class="table table-responsive">
+            <table class="table table-responsive ">
                 <thead>
                     <tr>
                         <th class="no">No</th>
@@ -86,9 +85,7 @@
     </div>
     </div>
 </template>
-
 <script setup>
-
 const supabase = useSupabaseClient()
 const name = ref('')
 const kategori = ref('')
@@ -133,17 +130,17 @@ async function addData(){
     if (error) throw error
     else getData()
 }
-  </script>
-  <style scope>
-  .content {
-      background-image: url("@/assets/images/bg.png");
-      width: 100%;
-      height: 650px;
-      padding-top: 150px;
-      display: flex;
-      justify-content: space-evenly;
-      align-content: center;
-  }
+</script>
+<style scope>
+.content {
+    background-image: url("@/assets/images/bg.png");
+    width: 100%;
+    height: 650px;
+    padding-top: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
 .row {
     margin: 10px;
 }
@@ -162,12 +159,12 @@ async function addData(){
 }
 
 .btn:hover{
-    background-color: #fff9c2 ;
-    color: #ffffff;
+    background-color: #ffe600 ;
+    color: #000000;
 }
 form {
     margin-top: 20px;
-    background-color: #f7b10070;
+    background-color: rgba(255, 198, 146, 0.55);
     width: 400px;
     height:330px;
     border-radius: 50px;
@@ -188,7 +185,9 @@ form {
     width: 25rem;
     height: 50px;
     font-size: 20px;
-    background-color: #fff9c2;
+    Background: rgba(255, 255, 255, 0.68);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 50px;
     border-style: hidden;
@@ -242,6 +241,7 @@ form {
 .showData {
     background-image: url("@/assets/images/bg.png");
     display: flex;
+    background-color: #ffe600;
     flex-direction: column;
     padding: 60px 5px 5px 0px;
 }
@@ -259,7 +259,7 @@ form {
 
 
 thead {
-    color: #655602;
+    color: rgba(255, 198, 146, 0.55);
     height: 50px;
     font-size: 20px;
 
@@ -275,8 +275,6 @@ h1{
     text-align:center ;
     font-size: 35px;
     color: #ffffff;
-
-
 }
 
 
@@ -284,7 +282,7 @@ h1{
 
 /* Style For Mobile Screen */
 #name {
-    width: 20rem;
+    width: 22rem;
     height: 50px;
     font-size: 20px;
     background-color: #fff9c2;
@@ -294,7 +292,7 @@ h1{
 
 }
 #kategori {
-    width: 20rem;
+    width: 22rem;
     height: 50px;
     font-size: 20px;
     background-color: #fff9c2;
@@ -333,7 +331,7 @@ h1{
     border-style: hidden;
 }
 #keperluan {
-    width: 20rem;
+    width: 22rem;
     height: 50px;
     font-size: 20px;
     padding-left: 15px;
