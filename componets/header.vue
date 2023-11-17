@@ -1,11 +1,11 @@
 <template>
   <div>
       <div class="nav-container">
-          <img src="@/assets/images/smk.png" class="smk"/>
+          <img src="@/assets/smk.png" class="smk"/>
           <div class="headerText">
           <h1>PERPUS-DIGITAL SMKN-4 TASIKMALAYA</h1>
           </div>
-          <img src="@/assets/images/logoclub.png" class="logoclub"/>
+          <img src="@/assets/logoclub.png" class="logoclub"/>
           
       </div>
   </div>
